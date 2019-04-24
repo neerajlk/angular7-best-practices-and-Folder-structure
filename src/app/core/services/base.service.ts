@@ -1,14 +1,17 @@
-import { Http } from '@angular/http';  
-import { Injectable } from '@angular/core';  
-  
-@Injectable({  
-  providedIn: 'root'  
-})  
-export class PostService {  
-  
-  private url = 'https://jsonplaceholder.typicode.com/posts';  
-    
+import { Injectable } from '@angular/core';
+
+import { Http } from '@angular/http'; 
+
+@Injectable({
+  providedIn: 'root'
+})
+export class BaseService {
+
   constructor(private http: Http) { }  
+  
+
+  public url = 'https://jsonplaceholder.typicode.com/posts';  
+    
   
   getPosts() {  
     return this.http.get(this.url);  
@@ -24,5 +27,5 @@ export class PostService {
   
   deletePost(id) {  
     return this.http.delete(this.url + '/' + id);  
-  }  
-}  
+  } 
+}

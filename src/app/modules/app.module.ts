@@ -1,7 +1,7 @@
 //core angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 //Environment
@@ -13,7 +13,16 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { MyComponent2Component } from './my-component-2/my-component-2.component';
 
 //Services
-import { PostService } from '../core/services/post.service'
+import { BaseService } from '../core/services/base.service'
+
+//Modules
+import {ModuleOneModule} from '../modules/module-one/module-one.module'
+import {ModuleTwoModule} from '../modules/module-two/module-two.module'
+
+//Components
+import { ModuleOneComponent } from './module-one/module-one.component';
+import { ModuleTwoComponent } from './module-two/module-two.component';
+
 
 
 //Routes
@@ -24,6 +33,14 @@ const moduleRoutes: Routes = [{
 {
   path: 'new-cmp-2',
   component: MyComponent2Component
+},
+{
+  path: 'mod-1-cmp',
+  component: ModuleOneComponent
+},
+{
+  path: 'mod-2-cmp',
+  component: ModuleTwoComponent
 }
 ]
 
@@ -35,13 +52,16 @@ const moduleRoutes: Routes = [{
     AppComponent,
     MyComponentComponent,
     MyComponent2Component,
+    
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(moduleRoutes),
+    ModuleOneModule,
+    ModuleTwoModule,
   ],
-  providers: [PostService],
+  providers: [BaseService],
   bootstrap: [AppComponent]
 })
 
