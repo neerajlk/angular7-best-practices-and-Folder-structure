@@ -14,11 +14,12 @@ import { MyComponent2Component } from './my-component-2/my-component-2.component
 
 //Services
 import { BaseService } from '../core/services/base.service'
-import { PostService } from '../core/services/post/post.service'
-import { SubService } from '../core/services/sub/sub.service';
+
+//Modules
 import {ModuleOneModule} from '../modules/module-one/module-one.module'
 import {ModuleTwoModule} from '../modules/module-two/module-two.module'
 
+//Components
 import { ModuleOneComponent } from './module-one/module-one.component';
 import { ModuleTwoComponent } from './module-two/module-two.component';
 
@@ -60,7 +61,7 @@ const moduleRoutes: Routes = [{
     ModuleOneModule,
     ModuleTwoModule,
   ],
-  providers: [BaseService, PostService, SubService],
+  providers: [BaseService],
   bootstrap: [AppComponent]
 })
 

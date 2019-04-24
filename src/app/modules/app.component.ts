@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     this.service.updatePost(post)  
       .subscribe(response => {  
         console.log(response.json());  
-        alert('Post Updated')
+        alert('User_ID : '+response.json().userId+' Updated')
       });  
   }  
   
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
       .subscribe(response => {  
         let index = this.posts.indexOf(post);  
         this.posts.splice(index, 1);  
-        alert('Post Deleted')
+        alert('post_ID : '+post.id+' Deleted')
       });  
   }  
 }
