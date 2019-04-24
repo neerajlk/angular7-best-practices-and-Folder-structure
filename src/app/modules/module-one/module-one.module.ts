@@ -8,11 +8,11 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
 import { RouterModule, Routes } from '@angular/router'
 
 const moduleRoutes: Routes = [{
-  path: 'mod-1-cmp-1',
+  path: 'mod-1-cmp/mod-1-cmp-1',
   component: ComponentOneComponent
 },
 {
-  path: 'mod-1-cmp-2',
+  path: 'mod-1-cmp/mod-1-cmp-2',
   component: ComponentTwoComponent
 },
 ]
