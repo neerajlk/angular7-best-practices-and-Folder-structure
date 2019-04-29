@@ -14,7 +14,7 @@ export class BaseService {
     
   
   getPosts() {  
-    return this.http.get(this.url);  
+    return this.http.get(this.url + '?_limit=10');  
   }  
   
   createPost(post) {  

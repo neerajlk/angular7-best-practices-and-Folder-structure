@@ -1,7 +1,6 @@
 //core angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 //Environment
@@ -19,31 +18,8 @@ import { BaseService } from '../core/services/base.service'
 import {ModuleOneModule} from '../modules/module-one/module-one.module'
 import {ModuleTwoModule} from '../modules/module-two/module-two.module'
 
-//Components
-import { ModuleOneComponent } from './module-one/module-one.component';
-import { ModuleTwoComponent } from './module-two/module-two.component';
-
-
-
-//Routes
-const moduleRoutes: Routes = [{
-  path: 'new-cmp',
-  component: MyComponentComponent
-},
-{
-  path: 'new-cmp-2',
-  component: MyComponent2Component
-},
-{
-  path: 'mod-1-cmp',
-  component: ModuleOneComponent
-},
-{
-  path: 'mod-2-cmp',
-  component: ModuleTwoComponent
-}
-]
-
+//routes
+import { Routing } from './app.routing';
 
 
 
@@ -57,7 +33,7 @@ const moduleRoutes: Routes = [{
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(moduleRoutes),
+    Routing,
     ModuleOneModule,
     ModuleTwoModule,
   ],
