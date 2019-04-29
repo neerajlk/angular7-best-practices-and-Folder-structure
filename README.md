@@ -1,4 +1,4 @@
-# SampleProject
+# Angular 7 Best Practices and Folder Structure
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
