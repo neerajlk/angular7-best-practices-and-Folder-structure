@@ -1,8 +1,11 @@
-<form #userlogin = "ngForm" (ngSubmit) = "addNumbers(userlogin.value)" class="div-adjust">
-  <input type = "number" name = "Number1" placeholder = "Number 1" ngModel>
-  <br/>
-  <input type = "number" name = "Number2" placeholder = "Number 2" ngModel>
-  <br/>
-  <br/>
-  <input type = "submit" value = "Add">
+<form #userlogin="ngForm" (ngSubmit)="addNumbers(userlogin.value)" class="div-adjust">
+  <input type="number" name="Number1" placeholder="Number 1" ngModel>
+  <br />
+  <input type="number" name="Number2" placeholder="Number 2" ngModel>
+  <br />
+  <br />
+  <input type="submit" value="Add">
+  <br>
+  <br>
+  <button routerLink="/Number-operations" class="btn btn-default btn-sm">Go Back</button>
 </form>
