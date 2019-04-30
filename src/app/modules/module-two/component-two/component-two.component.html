@@ -1,3 +1,8 @@
-<p>
-  module two,component-two works!
-</p>
+<form #userlogin = "ngForm" (ngSubmit) = "subtractNumbers(userlogin.value)" class="div-adjust">
+  <input type = "number" name = "Number1" placeholder = "Number 1" ngModel>
+  <br/>
+  <input type = "number" name = "Number2" placeholder = "Number 2" ngModel>
+  <br/>
+  <br/>
+  <input type = "submit" value = "Subtract">
+</form>
