@@ -8,17 +8,17 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
 import { RouterModule, Routes } from '@angular/router'
 
 const moduleRoutes: Routes = [{
-  path: 'mod-1-cmp/mod-1-cmp-1',
+  path: 'posts/posts-list',
   component: ComponentOneComponent
 },
 {
-  path: 'mod-1-cmp/mod-1-cmp-2',
+  path: 'posts/posts-list/:id',
   component: ComponentTwoComponent
-},
+}
 ]
 
 @NgModule({
-  declarations: [ModuleOneComponent,ComponentOneComponent, ComponentTwoComponent],
+  declarations: [ModuleOneComponent, ComponentOneComponent, ComponentTwoComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(moduleRoutes)

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 import { ModuleTwoComponent } from './module-two.component';
 import { ComponentOneComponent } from './component-one/component-one.component';
@@ -8,11 +10,11 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
 
 //Routes
 const moduleRoutes: Routes = [{
-  path: 'mod-2-cmp/mod-2-cmp-1',
+  path: 'Number-operations/add-numbers',
   component: ComponentOneComponent
 },
 {
-  path: 'mod-2-cmp/mod-2-cmp-2',
+  path: 'Number-operations/subtract-numbers',
   component: ComponentTwoComponent
 },
 
@@ -22,6 +24,7 @@ const moduleRoutes: Routes = [{
   declarations: [ModuleTwoComponent,ComponentOneComponent, ComponentTwoComponent],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forRoot(moduleRoutes)
   ],
 })

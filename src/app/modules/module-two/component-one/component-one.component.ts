@@ -12,4 +12,8 @@ export class ComponentOneComponent implements OnInit {
   ngOnInit() {
   }
 
+   // function to add 2 numbers
+   addNumbers = function (param) {
+    alert('Sum is = ' + (param.Number1 + param.Number2))
+  };
 }

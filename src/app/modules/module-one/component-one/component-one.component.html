@@ -1,3 +1,22 @@
-<p>
-  Module one ,component-one works!
-</p>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>View Details</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>
+        <a [routerLink]="['/posts/posts-list', post.id]"> View Details </a>
+    </td>
+    <td>
+      <button (click)="updatePost(post)" class="btn btn-default btn-sm">Update</button>
+    </td>
+    <td>
+      <button (click)="deletePost(post)" class="btn btn-danger btn-sm pull-right">Delete</button>
+    </td>
+  </tr>
+</table>
