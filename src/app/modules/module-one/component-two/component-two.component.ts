@@ -15,7 +15,7 @@ import { Post } from '../../../shared/models/post'
 })
 export class ComponentTwoComponent implements OnInit {
 
-  postById$: Observable<Post>;
+   private postDetails: Observable<Post>;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,11 +25,14 @@ export class ComponentTwoComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.postById$ = this.route.paramMap.pipe(
-      
-      // switchMap((params: ParamMap) =>
-      //   this.service.getPost(params.get('id')))
-    // );
+    let id = parseInt(this.route.snapshot.paramMap.get('id'))
+
+    
+    this.service.getPost(id)
+    .subscribe(response => {
+      this.postDetails = response.json();
+      console.log(this.postDetails)
+    });
   }
 
 }
