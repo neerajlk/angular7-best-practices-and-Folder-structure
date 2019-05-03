@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { PostService } from '../../../core/services/post/post.service';
+import { PostService } from '../../../core/http/post/post.service';
 import { Post } from '../../../shared/models/post'
 
 @Component({

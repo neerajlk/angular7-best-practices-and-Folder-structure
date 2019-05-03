@@ -9,9 +9,6 @@ import { AppComponent } from './app.component';
 import { ModuleOneModule } from '../modules/module-one/module-one.module'
 import { ModuleTwoModule } from '../modules/module-two/module-two.module'
 
-//Services
-import { BaseService } from '../core/services/base.service'
-
 //Shared Module
 import { SharedModule } from '../shared/shared.module'
 
@@ -37,7 +34,7 @@ import { Routing } from './app.routing';
     SharedModule,
     CoreModule
   ],
-  providers: [BaseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 

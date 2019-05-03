@@ -10,13 +10,16 @@
     <td>{{post.id}}</td>
     <td>{{post.title}}</td>
     <td>
-        <a [routerLink]="['/posts/posts-list', post.id]"> View Details </a>
+        <button class="btn-primary" [routerLink]="['/posts/posts-list', post.id]"> View Details </button>
     </td>
     <td>
-      <button (click)="updatePost(post)" class="btn btn-default btn-sm">Update</button>
+      <button (click)="updatePost(post)" class="btn btn-success btn-sm">Update</button>
     </td>
     <td>
       <button (click)="deletePost(post)" class="btn btn-danger btn-sm pull-right">Delete</button>
     </td>
   </tr>
 </table>
+<br>
+<br>
+<button routerLink="/posts" class="btn btn-danger btn-sm text-center">Go Back</button>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PostService } from '../../../core/services/post/post.service';
+import { PostService } from '../../../core/http/post/post.service';
 
 import { Post } from '../../../shared/models/post'
 
@@ -21,14 +21,12 @@ export class ComponentOneComponent implements OnInit {
     this.service.getPosts()
       .subscribe(response => {
         this.posts = response.json();
-        console.log(this.posts)
       });
   }
 
   updatePost(post) {
     this.service.updatePost(post)
       .subscribe(response => {
-        console.log(response.json());
         alert('User_ID : ' + response.json().userId + ' Updated')
       });
   }
