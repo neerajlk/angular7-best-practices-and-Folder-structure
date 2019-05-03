@@ -4,21 +4,19 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
-//Environment
-import { environment } from '../../environments/environment';
-
 //external angular components,modules,directives
 import { AppComponent } from './app.component';
+import { ModuleOneModule } from '../modules/module-one/module-one.module'
+import { ModuleTwoModule } from '../modules/module-two/module-two.module'
 
 //Services
 import { BaseService } from '../core/services/base.service'
 
-//Modules
-import { ModuleOneModule } from '../modules/module-one/module-one.module'
-import { ModuleTwoModule } from '../modules/module-two/module-two.module'
-
 //Shared Module
 import { SharedModule } from '../shared/shared.module'
+
+//core Module
+import {CoreModule} from '../core/core.module'
 
 //routes
 import { Routing } from './app.routing';
@@ -28,7 +26,6 @@ import { Routing } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -37,7 +34,8 @@ import { Routing } from './app.routing';
     Routing,
     ModuleOneModule,
     ModuleTwoModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [BaseService],
   bootstrap: [AppComponent]
@@ -46,6 +44,5 @@ import { Routing } from './app.routing';
 
 export class AppModule {
 
-  baseUrl = environment.baseUrl;
 
 }
