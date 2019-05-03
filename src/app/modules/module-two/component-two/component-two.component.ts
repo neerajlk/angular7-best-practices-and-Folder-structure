@@ -11,5 +11,9 @@ export class ComponentTwoComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
+  // function to subtract 2 numbers
+ subtractNumbers = function (param) {
+  alert('Difference is = ' + (param.Number1 - param.Number2))
+};
 }

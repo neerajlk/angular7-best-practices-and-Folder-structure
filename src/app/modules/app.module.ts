@@ -1,65 +1,41 @@
 //core angular modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-
-//Environment
-import { environment } from '../../environments/environment';
+import { FormsModule } from '@angular/forms';
 
 //external angular components,modules,directives
 import { AppComponent } from './app.component';
-import { MyComponentComponent } from './my-component/my-component.component';
-import { MyComponent2Component } from './my-component-2/my-component-2.component';
+import { ModuleOneModule } from '../modules/module-one/module-one.module'
+import { ModuleTwoModule } from '../modules/module-two/module-two.module'
 
 //Services
 import { BaseService } from '../core/services/base.service'
 
-//Modules
-import {ModuleOneModule} from '../modules/module-one/module-one.module'
-import {ModuleTwoModule} from '../modules/module-two/module-two.module'
+//Shared Module
+import { SharedModule } from '../shared/shared.module'
 
-//Components
-import { ModuleOneComponent } from './module-one/module-one.component';
-import { ModuleTwoComponent } from './module-two/module-two.component';
+//core Module
+import {CoreModule} from '../core/core.module'
 
-
-
-//Routes
-const moduleRoutes: Routes = [{
-  path: 'new-cmp',
-  component: MyComponentComponent
-},
-{
-  path: 'new-cmp-2',
-  component: MyComponent2Component
-},
-{
-  path: 'mod-1-cmp',
-  component: ModuleOneComponent
-},
-{
-  path: 'mod-2-cmp',
-  component: ModuleTwoComponent
-}
-]
-
+//routes
+import { Routing } from './app.routing';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent,
-    MyComponent2Component,
-    
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
-    RouterModule.forRoot(moduleRoutes),
+    Routing,
     ModuleOneModule,
     ModuleTwoModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [BaseService],
   bootstrap: [AppComponent]
@@ -68,6 +44,5 @@ const moduleRoutes: Routes = [{
 
 export class AppModule {
 
-  baseUrl = environment.baseUrl;
 
 }

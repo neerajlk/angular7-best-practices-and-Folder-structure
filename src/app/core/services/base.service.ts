@@ -13,8 +13,8 @@ export class BaseService {
   public url = 'https://jsonplaceholder.typicode.com/posts';  
     
   
-  getPosts() {  
-    return this.http.get(this.url);  
+  getPosts(param) {  
+    return this.http.get(this.url + param);  
   }  
   
   createPost(post) {  
