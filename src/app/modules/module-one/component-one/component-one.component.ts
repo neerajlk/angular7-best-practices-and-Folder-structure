@@ -11,7 +11,7 @@ import { Post } from '../../../shared/models/post'
 })
 export class ComponentOneComponent implements OnInit {
 
-  private posts: Post[]
+  posts: Post[];
   constructor(private service: PostService) {
   }
 

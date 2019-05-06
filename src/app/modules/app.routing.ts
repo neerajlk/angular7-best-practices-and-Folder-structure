@@ -12,7 +12,7 @@ const moduleRoutes: Routes = [
     component: ModuleOneComponent
   },
   {
-    path: 'Number-operations',
+    path: 'number-operations',
     component: ModuleTwoComponent
   }
   ]

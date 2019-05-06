@@ -15,24 +15,23 @@ import { Post } from '../../../shared/models/post'
 })
 export class ComponentTwoComponent implements OnInit {
 
-   private postDetails: Observable<Post>;
+  public postDetails
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private service: PostService
-  ) {}
+  ) { }
 
   ngOnInit() {
 
     let id = parseInt(this.route.snapshot.paramMap.get('id'))
 
-    
+
     this.service.getPost(id)
-    .subscribe(response => {
-      this.postDetails = response.json();
-      console.log(this.postDetails)
-    });
+      .subscribe(response => {
+        this.postDetails = response.json();
+      });
   }
 
 }
