@@ -8,11 +8,11 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
 
 //Routes
 const moduleRoutes: Routes = [{
-    path: 'Number-operations/add-numbers',
+    path: 'number-operations/add-numbers',
     component: ComponentOneComponent
 },
 {
-    path: 'Number-operations/subtract-numbers',
+    path: 'number-operations/subtract-numbers',
     component: ComponentTwoComponent
 },
 ]

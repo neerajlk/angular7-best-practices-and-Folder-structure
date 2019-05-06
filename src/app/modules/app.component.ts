@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { environment } from '../../environments/environment'
+
+console.log(environment)
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,11 +17,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() { }
-
+  env = environment
   appLoader = true
 }
-
-
 
 
 
